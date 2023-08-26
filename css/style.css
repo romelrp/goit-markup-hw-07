@@ -70,9 +70,25 @@ body {
     background-color: var(--whitecolor);
     margin: 0;
     min-height: 100vh;
-
-
 }
+
+/*---mobile----*/
+
+.container {
+    width: 428px;
+    margin: 0 auto;
+    padding: 0 16px;
+
+    @media screen and (min-width: 768px) {
+        max-width: 768px;
+    }
+
+    @media screen and (min-width: 1158px) {
+        max-width: 1158px;
+    }
+}
+
+
 
 /*-----------------------------------*\
   #Header
@@ -175,7 +191,7 @@ body {
     border: 2px solid var(--oceancolor);
     background-color: var(--oceancolor);
     width: 100%;
-}   
+}
 
 
 /*----Checked----*/
@@ -199,18 +215,19 @@ body {
 
 /*----Checked----*/
 .hero {
-    padding: 200px 0;
+    /* padding: 200px 0; */
+    padding: 112px;
     text-align: center;
     margin: 0 auto;
     flex-direction: column;
     justify-content: center;
-    background: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/people-office.jpg);
-    background-repeat: no-repeat;
+    /* background: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/people-office.jpg); */
+    /* background-repeat: no-repeat; */
     background-position: center;
     background-size: cover;
     height: 600px;
     align-items: center;
-    justify-content: center;
+    background: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/office-mobile.jpg);
 }
 
 /*----Checked----*/
@@ -218,8 +235,8 @@ body {
     background-color: var(--cloud);
 }
 
-/*----Checked----*/
-.hero-title {
+/*----Checked- Desktop---*/
+/* .hero-title {
     color: var(--whitecolor);
     font-size: 56px;
     line-height: 60px;
@@ -227,7 +244,21 @@ body {
     font-weight: 700;
     margin-bottom: 50px;
     text-align: center;
+} */
+
+/*----mobile----*/
+.hero-title {
+    /* width: 320px; */
+    color: var(--whitecolor);
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700px;
+    line-height: 40px; 
+    letter-spacing: 0.72px;
+    text-transform: capitalize;
 }
+
+
 
 /*----Checked----*/
 .button {
@@ -251,7 +282,8 @@ body {
     line-height: 1.87;
     letter-spacing: 0.06em;
     font-weight: 500;
-    padding: 10px 32px;
+    /* padding: 10px 32px; */
+    padding: 16px 32px; /*mobile*/
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     gap: 10px;
     display: inline-flex;
@@ -305,12 +337,12 @@ body {
 
 /*----Section 2----*/
 /*----Checked----*/
-.container {
+/* .container {
     margin: 0 auto;
     padding: 0 15px;
     width: 1200px;
 
-}
+} */
 
 /* element.style {
     appearance: none;
@@ -336,10 +368,9 @@ body {
 .benefits {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -30px;
-    margin-top: -30px;
-
-
+    /* margin-left: -30px;
+    margin-top: -30px; */
+    flex-direction: column;
 }
 
 /* .benefits.image {
@@ -352,18 +383,22 @@ body {
 } */
 
 /* This will change to icon */
-.icon {}
+.icon {
+    
+}
 
 
 .benefits .icon {
-    display: flex;
+    /*Desktop*/
+    /* display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 8px;
     width: 264px;
     height: 120px;
     background-color: var(--cloud);
-    border-radius: 4px;
+    border-radius: 4px; */
+    display: none; /*mobile*/
 }
 
 /*----Checked----*/
@@ -389,6 +424,7 @@ body {
     font-weight: 500;
     line-height: 1.14;
     margin-bottom: 10px;
+    text-align: center; /*mobile*/
 }
 
 /*----for Section 3 & 4----*/
@@ -398,6 +434,7 @@ body {
     flex-wrap: wrap;
     margin-left: -30px;
     margin-top: -30px;
+    
 }
 
 /*----Checked----*/
@@ -407,8 +444,9 @@ body {
     margin-top: 30px;
 }
 
-.no.top-padding {
-    scroll-padding-top: 0;
+.no-top-padding {
+    /* scroll-padding-top: 0; */
+    display: none;
 }
 
 /*----Checked----*/
@@ -431,8 +469,13 @@ body {
 .team {
     display: flex;
     flex-wrap: wrap;
-    margin-top: -30px;
-    margin-left: -30px;
+    /* margin-top: -30px;
+    margin-left: -30px; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 72px;
 
 }
 
@@ -620,21 +663,36 @@ body {
 } */
 
 .partners {
+    /* display: flex;
+    gap: 30px */
     display: flex;
-    gap: 30px
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    column-gap: 24px;
+    row-gap: 72px;
 }
 
 /*----Checked----*/
 .partners .item {
-    width: calc((100% - 150px) / 6);
+    justify-content: center;
+    /* width: calc((100% - 150px) / 6); */
     height: 90px;
+    @media screen and (min-width: 768px) {
+        /* min-width: 768px; */
+        width: calc((100% - 60px) / 3);
+    }
+    
 }
 
-
 .partners .link {
-    display: flex;
-    width: 100%;
-    height: 100%;
+    display: inline-flex;
+    /* display: flex; */
+    /* width: 100%;
+    height: 100%; */
+    width: 168px;
+    height: 88px;
     border: 1px solid var(--lightslate);
     justify-content: center;
     align-items: center;
@@ -692,19 +750,42 @@ body {
 
 .footer {
     display: flex;
-    margin-top: -12px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: -12px;
     margin-left: -56px;
-    align-items: baseline;
-
+    align-items: baseline; */
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 72px;
+      }
+    
+      @media screen and (min-width: 1158px) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        column-gap: 96px;
+        row-gap: 0;
+      }
 }
 
 .footer-address {
-    margin-top: 12px;
-    margin-left: 25px;
+    /* margin-top: 12px;
+    margin-left: 25px; */
+    text-align: center;
 }
 
 .footer-block {
-    margin-left: 123px;
+    /* margin-left: 123px; */
+    text-align: center;
+    padding-top: 72px;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -727,6 +808,7 @@ body {
     font-weight: 400;
     line-height: 1.5;
     padding-top: 16px;
+    text-align: left;
 }
 
 /* .social-media {
@@ -754,6 +836,18 @@ body {
     letter-spacing: 0.32px;
     line-height: 24px;
     font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 16px;
+
+    @media screen and (min-width: 768px) {
+        text-align: left;
+      }
+    
+      @media screen and (min-width: 1158px) {
+        text-align: left;
+      }
 
 }
 
@@ -785,11 +879,27 @@ body {
 
 /*----This is Subcribe Footer----*/
 .footer-form {
-    margin-left: 80px;
+    /* margin-left: 80px; */
+    display: block;
 }
 
-.footer-subscribe {
-    text-decoration: none;
+.footer-subscription {
+    /* text-decoration: none; */
+    display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  @media screen and (min-width: 1158px) {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
 }
 
 
@@ -813,13 +923,30 @@ body {
 .footer-input {
     border-radius: 4px;
     border: 1px solid var(--whitecolor);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    background-color: var(--navyblue-modal);
-    width: 264px;
+    /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15); */
+    /* background-color: var(--navyblue-modal); */
+    background-color: transparent;
+    font-size: 12px;
+    /* width: 264px; */
     height: 40px;
     outline: none;
-    padding-left: 16px;
+    /* padding-left: 16px; */
     color: var(--whitecolor);
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px solid var(--whitecolor);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    margin-top: 16px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+        width: 264px;
+      }
+    
+      @media screen and (min-width: 1158px) {
+        width: 264px;
+      }
 
 }
 
@@ -839,6 +966,15 @@ body {
     justify-content: center;
     align-items: center;
     font-weight: 500px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    @media screen and (min-width: 768px) {
+        align-self: flex-end;
+      }
+    
+      @media screen and (min-width: 1158px) {
+        align-self: flex-end;
+      }
 }
 
 .button.subscribe:hover,
