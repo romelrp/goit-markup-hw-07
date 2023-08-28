@@ -43,6 +43,7 @@ html {
 /*----Checked----*/
 img {
     display: block;
+    width: 100%;
     max-width: 100%;
     height: auto;
 }
@@ -216,6 +217,8 @@ body {
 /*----Checked----*/
 .hero {
     /* padding: 200px 0; */
+    background: url(../images/office-mobile.jpg), linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70));
+    background-repeat: no-repeat;
     padding: 112px 0;
     text-align: center;
     margin: 0 auto;
@@ -227,7 +230,6 @@ body {
     background-size: cover;
     height: 600px;
     align-items: center;
-    background: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/office-mobile.jpg);
     width: 428px;
     height: 432px;
     /* flex-shrink: 0; */
@@ -240,7 +242,55 @@ body {
       border-bottom: 1px solid var(--cornflower, #E7E9FC); */
     /* background: var(--white, #FFF);
 box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08); */
+    /* Mobile version */
+        @media screen and (min-width: 768px) {
+            background-image: unset;
+    }
+    /* mobile 2x */
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url(../images/office-mobile@2x.jpg), linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)); 
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    /* Tablet version */
+    @media screen and (min-width: 768px) {
+        background-image: url(../images/office-tablet.jpg), linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70));
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+  }
+    /* table 2x */
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url(../images/office-tablet@2x.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+     /* Desktop version */
+     @media screen and (min-width: 1158px) {
+        background-image: url(../images/people-office.jpg), linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70));
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+  }
+    /* Desktop 2x */
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      background-image: url(../images/people-office@2x.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
 }
+
 
 /*----Checked----*/
 .bg-team {
@@ -1063,8 +1113,6 @@ box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
 .logo,
 .studio {
     display: inline-block;
-  
-    
 }
 
 /*----Checked----*/
