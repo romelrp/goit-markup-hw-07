@@ -81,11 +81,11 @@ body {
     padding: 0 16px;
 
     @media screen and (min-width: 768px) {
-        max-width: 768px;
+        width: 768px;
     }
 
     @media screen and (min-width: 1158px) {
-        max-width: 1158px;
+       width: 1158px;
     }
 }
 
@@ -117,12 +117,19 @@ body {
     font-size: 18px;
     line-height: 1.17;
     letter-spacing: 0.04em;
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        text-decoration: none;
+        
+    }
 }
 
 /*----Checked----*/
 .nav-menu {
     margin-left: 93px;
-
+    
 }
 
 /*----Checked----*/
@@ -133,10 +140,15 @@ body {
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    display: block;
     padding-top: 32px;
     padding-bottom: 31px;
+    /* display: none; */
+
+    /* @media screen and (min-width: 768px) {
+        display: flex;
+    } */
 }
+
 
 .nav-menu .page .contacts-menu .contact {
     transition: color 250ms ease-in-out;
@@ -321,6 +333,10 @@ box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
     letter-spacing: 0.72px;
     text-transform: capitalize;
     padding-bottom: 72px;
+
+    @media screen and (min-width: 768px) {
+        font-size: 56px;
+    }
 }
 
 /*----Checked----*/
@@ -518,8 +534,13 @@ box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47,
 
 /*----Checked----*/
 .section {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px;
+    padding-bottom: 96px;
+
+    @media screen and (min-width: 1158px){
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
 }
 
 /*----Checked----*/
@@ -1412,7 +1433,7 @@ textarea.form-textarea {
 }
 
 /*----HAMBURGER-----*/
-/* .menu-toggle {
+.menu-toggle {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1425,12 +1446,20 @@ textarea.form-textarea {
     outline: none;
     color: var(--navyblue);
 
+    /* @media screen and (min-width: 768px) {
+        display: none;
+    } */
+} 
+
+.menu-icon {
+    fill: currentColor;
+}
+
+.menu-container {
     @media screen and (min-width: 768px) {
         display: none;
     }
-} */
-
-
+}
 
 /* .hamburger-close-button {
     position: absolute;
@@ -1450,9 +1479,7 @@ textarea.form-textarea {
         color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } */
 
-.menu-icon {
-    fill: currentColor;
-}
+
 
 .hamburger-close-button:hover,
 .hamburger-close-button:focus {
